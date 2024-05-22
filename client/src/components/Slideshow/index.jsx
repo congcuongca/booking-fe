@@ -4,16 +4,13 @@ import './style.css';
 
 const slides = [
     {
-      image: 'https://via.placeholder.com/800x400.png?text=Slide+1',
-      caption: 'Caption for Slide 1'
+      image: 'https://chieuphimquocgia.com.vn/_next/image?url=http%3A%2F%2Fapiv2.chieuphimquocgia.com.vn%2FContent%2FImages%2FBanner%2F0017599.jpg&w=1920&q=75',
     },
     {
-      image: 'https://via.placeholder.com/800x400.png?text=Slide+2',
-      caption: 'Caption for Slide 2'
+      image: 'https://chieuphimquocgia.com.vn/_next/image?url=http%3A%2F%2Fapiv2.chieuphimquocgia.com.vn%2FContent%2FImages%2FBanner%2F0017583.jpg&w=1920&q=75',
     },
     {
-      image: 'https://via.placeholder.com/800x400.png?text=Slide+3',
-      caption: 'Caption for Slide 3'
+      image: 'https://chieuphimquocgia.com.vn/_next/image?url=http%3A%2F%2Fapiv2.chieuphimquocgia.com.vn%2FContent%2FImages%2FBanner%2F0017575.jpg&w=1920&q=75',
     }
   ];
   
@@ -36,7 +33,6 @@ const slides = [
             className={`slide ${index === currentSlide ? 'active' : ''}`}
           >
             <img src={slide.image} alt={`Slide ${index + 1}`} />
-            <div className="caption">{slide.caption}</div>
           </div>
         ))}
       </div>

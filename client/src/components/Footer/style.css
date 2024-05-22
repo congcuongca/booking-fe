@@ -19,9 +19,11 @@ body, html {
   .Footer_box {
     background-color: black;
     padding: 2rem;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 2rem; /* Khoảng cách giữa nội dung chính và footer */
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   
   .name_footer {
