@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Route, BrowserRouter} from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
 import Items from './components/Items'
@@ -15,8 +16,16 @@ import Reservation from './components/Reservations'
 function App() {
   const [count, setCount] = useState(0)
   return (
-    //<Items imageUrl={'#'} title={"hehe"}/>
-    <Reservation/>
+    <BrowserRouter>
+      <Route exact path='/'>
+        <div className='app'>
+          <Header/>
+          <div className=''>
+
+          </div>
+        </div>
+      </Route>
+    </BrowserRouter>
   )
 }
 
