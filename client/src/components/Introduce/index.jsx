@@ -5,7 +5,6 @@ function Introduce()
 {
     return(
         <>
-            <Header/>
             <div className="mx-auto max-w-7xl">
                 <h3 class="text-2xl font-bold text-center mb-6">Giới thiệu</h3>
                 <div class="mt-10">

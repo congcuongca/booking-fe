@@ -7,7 +7,6 @@ function News()
 {
     return (
         <>
-            <Header/>
             <div className='pt-20 xl:pt-28 pb-10 xl:pb-20 px-4 xl:px-0'>
                 <div className='mx-auto max-w-7xl'>
                     <h3 className='text-2xl font-bold mb-4 xl:mb-10 text-center'>

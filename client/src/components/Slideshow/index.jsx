@@ -1,17 +1,46 @@
-import './style.css'
-import { useState } from "react"
+// Slideshow.js
+import React, { useState, useEffect } from 'react';
+import './style.css';
 
-function Slideshow()
-{
-    return(
-        <>
-            <div className='swiper-slide bg-primary relative'style='width: 1269px; opacity: 1; transform: translate3d(-8883px, 0px, 0px); transition-duration: 0ms;' data-swiper-slide-index="7">
-                <div className='bg-primary xl:mt-20 mt-16 pb-4 md:pb-6 xl:pb-10'>
-                    
-                </div>
-            </div>
-        </>
-    )
-}
-
-export default Slideshow
+const slides = [
+    {
+      image: 'https://via.placeholder.com/800x400.png?text=Slide+1',
+      caption: 'Caption for Slide 1'
+    },
+    {
+      image: 'https://via.placeholder.com/800x400.png?text=Slide+2',
+      caption: 'Caption for Slide 2'
+    },
+    {
+      image: 'https://via.placeholder.com/800x400.png?text=Slide+3',
+      caption: 'Caption for Slide 3'
+    }
+  ];
+  
+  function Slideshow() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+  
+    useEffect(() => {
+      const slideInterval = setInterval(() => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      }, 3000);
+  
+      return () => clearInterval(slideInterval);
+    }, []);
+  
+    return (
+      <div className="slideshow">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`slide ${index === currentSlide ? 'active' : ''}`}
+          >
+            <img src={slide.image} alt={`Slide ${index + 1}`} />
+            <div className="caption">{slide.caption}</div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+  
+  export default Slideshow;

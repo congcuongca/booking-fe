@@ -6,7 +6,6 @@ function Fare()
 {
     return(
         <>
-            <Header/>
             <div className='mx-auto max-w-7xl'>
                 <div className='flex flex-col items-center justify-center'>
                     <h1 className='text-2xl font-bold'>Giá vé</h1>

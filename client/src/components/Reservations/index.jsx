@@ -6,7 +6,6 @@ function Reservation()
 {
     return(
         <>
-            <Header/>
             <div class="hidden xl:block absolute w-full inset-0 m-auto z-20">
                 <div class="w-full max-w-4xl m-auto h-[473px] py-7 pt-24 flex gap-10">
                     <div class="relative h-[333px] min-w-[238px] shadow-lg"> 
