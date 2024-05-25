@@ -1,8 +1,18 @@
 // Header.js
 import './style.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate();
+
+  const handleSignupClick = () => {
+    navigate('/register');
+  };
+
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
   return (
     <div className='header_name h-full'>
       <div className='header_links_left ml-12 hidden xl:flex items-center gap-10 z-30'>
@@ -14,10 +24,14 @@ function Header() {
       </div>
 
       <div className='header_buttom ml-auto hidden xl:flex items-center gap-5'>
-        <button className='button_1 inline-flex items-center justify-center rounded-full text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-8 py-2 hover:scale-105 transition duration-300 border-white'>
+        <button 
+          onClick={handleSignupClick}
+          className='button_1 inline-flex items-center justify-center rounded-full text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-8 py-2 hover:scale-105 transition duration-300 border-white'>
           Đăng ký
         </button>
-        <button className='button_2 inline-flex items-center justify-center rounded-full text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-8 py-2 hover:scale-105 transition duration-300 border-white'>
+        <button 
+          onClick={handleLoginClick}
+          className='button_2 inline-flex items-center justify-center rounded-full text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-transparent hover:bg-accent hover:text-accent-foreground h-10 px-8 py-2 hover:scale-105 transition duration-300 border-white'>
           Đăng nhập
         </button>
       </div>
