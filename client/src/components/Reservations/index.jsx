@@ -1,7 +1,5 @@
 import { useState } from "react"
-import Header from '../Header'
 import Items from "../Items"
-import Footer from "../Footer"
 function Reservation()
 {
     return(

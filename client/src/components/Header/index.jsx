@@ -17,9 +17,8 @@ function Header() {
     <div className='header_name h-full'>
       <div className='header_links_left ml-12 hidden xl:flex items-center gap-10 z-30'>
         <Link to="/" className='hover:text-red-500 text-white'>Trang chủ</Link>
-        <Link to="/schedule" className='hover:text-red-500 text-white'>Lịch chiếu</Link>
+        <Link to="/reservation" className='hover:text-red-500 text-white'>Lịch chiếu</Link>
         <Link to="/promotion" className='hover:text-red-500 text-white'>Khuyến Mãi</Link>
-        <Link to="/fare" className='hover:text-red-500 text-white'>Giá vé</Link>
         <Link to="/introduce" className='hover:text-red-500 text-white'>Giới thiệu</Link>
       </div>
 
