@@ -1,4 +1,3 @@
-import './style.css'
 import { useState } from "react"
 import Header from '../Header'
 

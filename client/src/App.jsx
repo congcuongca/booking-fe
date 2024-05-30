@@ -41,7 +41,7 @@ function App() {
           <Route path="/promotion" element={<Promotion />} />
           <Route path="/introduce" element={<Introduce />} />
           <Route path="/reservation" element={<Reservation />} />
-          <Route path="/forgotpassword" element={<ForgotPasswordPage />} /> {/* Add Route for ForgotPasswordPage */}
+          <Route path="/forgotpassword" element={<ForgotPasswordPage />} />
         </Route>
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<LoginComponent />} />
